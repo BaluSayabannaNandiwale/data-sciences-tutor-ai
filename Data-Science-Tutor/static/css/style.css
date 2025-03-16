@@ -1,0 +1,251 @@
+/* Main app styling */
+body {
+    background-color: #262a47;;
+    color: #e8e6f1;
+}
+
+.main .block-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* Add more padding at the bottom to prevent overlap with chat input */
+    padding-bottom: 5rem;
+}
+
+/* Main title and subtitle */
+.main-title {
+    color: #ff79c6;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.subtitle {
+    color:#8be9fd;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Chat container styling */
+.stChatMessage {
+    background-color: transparent !important;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    max-width: 85%;
+    line-height: 1.5;
+}
+
+.user-message {
+    background-color: #394867;
+    color:#f0f2f6;
+    border-radius: 15px 15px 5px 15px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.assistant-message {
+    background-color: #3d5273;
+    color: #f8f9fa;
+    border-radius: 15px 15px 15px 5px;
+    margin-right: auto;
+    margin-left: 10px;
+    /* Ensure code blocks don't break the container */
+    overflow-x: auto;
+}
+
+/* Sidebar styling */
+.css-1d391kg, .css-10oheav, .css-1wrcr25 {
+    background-color: #1e1e2e;
+}
+
+.sidebar-header {
+    color: #e33434;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #3a3a4a;
+}
+
+.sidebar-text {
+    color: #c0b1a0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.sidebar-list-item {
+    color: #c0aaa0;
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 3px 0;
+}
+
+.spacer {
+    height: 20px;
+}
+
+/* Code block styling - improved to ensure proper separation */
+pre {
+    background-color: #1a1a2e;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+    border: 1px solid #3a3a4a;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #e6e6e6;
+    font-size: 0.9rem;
+}
+
+/* Ensure code blocks inside messages are properly contained */
+.message pre {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+/* Hide the language indicator text that appears after code blocks - ENHANCED */
+.python, .language-python, code.python {
+    display: none !important;
+}
+
+/* Hide any text immediately following a code block */
+pre + * {
+    display: none !important;
+}
+
+/* Target specific language identifiers that might appear */
+.stMarkdown pre + p:first-of-type,
+.stMarkdown pre + div:first-of-type {
+    display: none !important;
+}
+
+/* Additional hiding for any potential language indicators */
+pre code::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Hide any language indicator class */
+[class*="language-"] {
+    display: inline !important;
+}
+
+/* Button styling */
+.stButton button {
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: #2a3349;
+    color: #e0e2e6;
+    border: 1px solid #3a3a4a;
+    transition: all 0.3s;
+}
+
+.stButton button:hover {
+    background-color: #3a4359;
+    border-color: #4a90e2;
+    transform: translateY(-2px);
+}
+
+/* Chat input styling - fixed position at bottom with higher z-index */
+.stChatInputContainer {
+    background-color: #1e1e2e !important;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 10px 10px 340px; /* Adjust left padding to account for sidebar */
+}
+
+/* Adjust for collapsed sidebar */
+@media screen and (max-width: 992px) {
+    .stChatInputContainer {
+        padding-left: 10px;
+    }
+}
+
+.stChatInputContainer textarea {
+    background-color: #2a3349 !important;
+    color: #f0f2f6 !important;
+    border: 1px solid #3a3a4a !important;
+    border-radius: 8px !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3a4a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4a5a;
+}
+
+/* Make sure markdown content is visible */
+.stMarkdown {
+    color: #f0f2f6;
+}
+
+/* Success message styling */
+.element-container .stAlert {
+    background-color: #27ae60;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+}
+
+/* Spinner styling - ensure it appears in the right place */
+.stSpinner {
+    border-color: #e26d4a !important;
+}
+
+/* Remove backgrounds of some streamlit containers */
+.css-18e3th9, .css-1d391kg, .css-1a1fmpi {
+    background-color: #2e281e !important;
+}
+
+/* Fix for thinking message position */
+.thinking-message {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Hide all elements following pre that might be language indicators */
+pre ~ span:first-of-type, 
+pre ~ div:first-of-type {
+    display: none !important;
+}

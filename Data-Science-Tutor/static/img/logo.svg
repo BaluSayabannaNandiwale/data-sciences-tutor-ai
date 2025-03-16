@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Background circle -->
+  <circle cx="250" cy="250" r="240" fill="#f8f9fa" stroke="#4a90e2" stroke-width="6"/>
+  
+  <!-- Brain/data pattern background -->
+  <path d="M180,160 Q220,120 260,160 Q300,200 340,160 Q380,120 420,160" fill="none" stroke="#4a90e2" stroke-width="4" opacity="0.7"/>
+  <path d="M180,190 Q220,150 260,190 Q300,230 340,190 Q380,150 420,190" fill="none" stroke="#4a90e2" stroke-width="4" opacity="0.7"/>
+  <path d="M180,220 Q220,180 260,220 Q300,260 340,220 Q380,180 420,220" fill="none" stroke="#4a90e2" stroke-width="4" opacity="0.7"/>
+  
+  <!-- Data points -->
+  <circle cx="200" cy="160" r="6" fill="#34a853"/>
+  <circle cx="240" cy="180" r="6" fill="#34a853"/>
+  <circle cx="280" cy="150" r="6" fill="#34a853"/>
+  <circle cx="320" cy="175" r="6" fill="#34a853"/>
+  <circle cx="360" cy="155" r="6" fill="#34a853"/>
+  <circle cx="230" cy="210" r="6" fill="#34a853"/>
+  <circle cx="270" cy="230" r="6" fill="#34a853"/>
+  <circle cx="310" cy="200" r="6" fill="#34a853"/>
+  <circle cx="350" cy="220" r="6" fill="#34a853"/>
+  
+  <!-- Mortar board (graduation cap) -->
+  <rect x="180" y="300" width="140" height="15" fill="#2c3e50"/>
+  <polygon points="250,260 200,290 300,290" fill="#2c3e50"/>
+  <rect x="240" y="260" width="20" height="40" fill="#2c3e50"/>
+  <circle cx="250" cy="255" r="10" fill="#2c3e50"/>
+  <line x1="290" y1="300" x2="290" y2="320" stroke="#2c3e50" stroke-width="5"/>
+  <line x1="290" y1="320" x2="310" y2="320" stroke="#2c3e50" stroke-width="5"/>
+  
+  <!-- Text -->
+  <text x="250" y="375" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#2c3e50">Data Science</text>
+  <text x="250" y="420" font-family="Arial, sans-serif" font-size="45" font-weight="bold" text-anchor="middle" fill="#4a90e2">TUTOR</text>
+</svg>
